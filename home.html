@@ -31,7 +31,8 @@
             resize: none;
         }
 
-        #inputUrl {
+        #address {
+            color: white;
             position: absolute;
             left: 50vw;
             bottom: 35vh;
@@ -39,13 +40,6 @@
             border: 10px solid rgba(255, 255, 255, 0.3);
             border-radius: 16px;
             background-color: black;
-            transform: translateX(-50%);
-        }
-
-        #exec {
-            bottom: 5px;
-            left: 50vw;
-            position: absolute;
             transform: translateX(-50%);
         }
 
@@ -57,13 +51,32 @@
             top:0px;
             border: none;
         }
+
+        .payloads {
+            position: absolute;
+            top: 70vh;
+            display: table;
+        }
+
+        .payloads button {
+            padding: 5px 15px;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            background-color: black;
+            color: white;
+            border: 3px solid rgb(27, 27, 27);
+            border-radius: 6px;
+        }
     </style>
 </head>
 <body>
     <textarea id="editor">alert(1);</textarea>
-    <input type="text" id="inputUrl" placeholder="Input Url">
-    <button id="exec">Execute</button>
-
-
+    <form id="form" class="flex-center">
+        <input id="search-engine" value="https://www.google.com/search?q=%s" type="hidden"/>
+        <input id="address" class="inputUrl" type="text" placeholder="Search the web freely" />
+      </form>
+          <div class="payloads" id="payloads">
+        
+    </div>
 </body>
 </html>
